@@ -1,4 +1,4 @@
-package com.codeWithAshith.SpringBasics;
+package com.codeWithAshith.SpringBasics.basic;
 
 public interface SortAlgorithm {
 

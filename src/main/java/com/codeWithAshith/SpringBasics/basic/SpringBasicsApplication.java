@@ -1,4 +1,4 @@
-package com.codeWithAshith.SpringBasics;
+package com.codeWithAshith.SpringBasics.basic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

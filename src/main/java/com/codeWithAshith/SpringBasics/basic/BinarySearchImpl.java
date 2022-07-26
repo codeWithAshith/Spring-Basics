@@ -1,4 +1,4 @@
-package com.codeWithAshith.SpringBasics;
+package com.codeWithAshith.SpringBasics.basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
