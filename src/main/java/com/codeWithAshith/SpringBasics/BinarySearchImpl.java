@@ -1,18 +1,25 @@
 package com.codeWithAshith.SpringBasics;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+// new beam whenever requested
+//@Scope("prototype")
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class BinarySearchImpl {
 
     @Autowired
-    private SortAlgorithm bubbleSortAlgorithm;
+    @Qualifier("quick")
+    private SortAlgorithm sortAlgorithm;
 
     public int binarySearch(int[] numbers, int numberToSearchFor) {
 
-        int[] sortedNumbers = bubbleSortAlgorithm.sort(numbers);
-        System.out.println(bubbleSortAlgorithm);
+        int[] sortedNumbers = sortAlgorithm.sort(numbers);
+        System.out.println(sortAlgorithm);
 
         // Search Array
 
