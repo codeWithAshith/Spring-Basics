@@ -1,6 +1,6 @@
 package com.codeWithAshith.SpringBasics;
 
-public class BubbleSortAlgorithm implements SortAlgorithm{
+public class BubbleSortAlgorithm {
 
     public int[] sort(int[] numbers) {
         // Logic for Bubble Sort
