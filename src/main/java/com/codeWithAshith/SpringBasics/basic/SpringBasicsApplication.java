@@ -1,21 +1,18 @@
 package com.codeWithAshith.SpringBasics.basic;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
+@ComponentScan
 public class SpringBasicsApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(SpringBasicsApplication.class, args);
-
         // Application Context
-        ApplicationContext applicationContext = SpringApplication.run(SpringBasicsApplication.class, args);
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringBasicsApplication.class);
         BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
 
         System.out.println(binarySearch);
